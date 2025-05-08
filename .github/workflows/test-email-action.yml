@@ -17,3 +17,5 @@ jobs:
         uses: ./.github/actions/hpe-email
         with:
           to: ${{ vars.EMAIL_LIST }}
+          username: ${{ secrets.TO_EMAIL }}
+          password: ${{ secrets.TO_PASSWORD }}

@@ -5,6 +5,12 @@ inputs:
   to:
     description: "Email address to send the email to"
     required: true
+  username:
+    description: "Username for the email server"
+    required: true
+  password:
+    description: "Password for the email server"
+    required: true
 
 runs:
   using: "composite"
@@ -15,6 +21,8 @@ runs:
         to: ${{ inputs.to }}
         subject: "HPE Deployment Email"
         body: "This is a test email from the HPE deployment workflow."
-        from: "DSCC Deployments Email BOT"
+        from: "<${{ inputs.username }}>"
         server_address: "smtp.office365.com"
         server_port: 587
+        username: ${{ inputs.username }}
+        password: ${{ inputs.password }}
