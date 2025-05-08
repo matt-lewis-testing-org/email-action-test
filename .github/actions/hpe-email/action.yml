@@ -26,3 +26,5 @@ runs:
         server_port: 587
         username: ${{ inputs.username }}
         password: ${{ inputs.password }}
+        secure: true
+        ssl: true
