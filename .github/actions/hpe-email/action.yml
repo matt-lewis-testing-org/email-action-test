@@ -1,0 +1,11 @@
+name: Email HPE
+description: ""
+
+runs:
+  using: "composite"
+  steps:
+    - name: Generate Deployment Summary
+      uses: actions/github-script@v7
+      with:
+        script: |
+          console.log("TEST");
