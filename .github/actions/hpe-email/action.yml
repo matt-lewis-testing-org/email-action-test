@@ -16,3 +16,4 @@ runs:
         subject: "HPE Deployment Email"
         body: "This is a test email from the HPE deployment workflow."
         from: "DSCC Deployments Email BOT"
+        server_address: "smtp.example.com"
