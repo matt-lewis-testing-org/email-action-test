@@ -10,4 +10,4 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Call the Action
-        uses: 
+        uses: ./.github/actions/hpe-email
