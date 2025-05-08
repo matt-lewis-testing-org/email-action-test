@@ -27,4 +27,3 @@ runs:
         username: ${{ inputs.username }}
         password: ${{ inputs.password }}
         secure: true
-        ssl: true
