@@ -9,6 +9,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Print email list
+        run: |
+          echo "Email list: ${{ vars.EMAIL_LIST }}"
+
       - name: Call the Email Action
         uses: ./.github/actions/hpe-email
         with:
