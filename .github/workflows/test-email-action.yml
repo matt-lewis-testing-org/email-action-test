@@ -9,5 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Call the Action
+      - name: Call the Email Action
         uses: ./.github/actions/hpe-email
+        with:
+          to: ${{ vars.EMAIL_LIST }}

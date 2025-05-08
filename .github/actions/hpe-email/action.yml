@@ -1,11 +1,17 @@
 name: Email HPE
 description: ""
 
+inputs:
+  to:
+    description: "Email address to send the email to"
+    required: true
+
 runs:
   using: "composite"
   steps:
-    - name: Generate Deployment Summary
-      uses: actions/github-script@v7
+    - name: Send email
+      uses: dawidd6/action-send-mail@v5
       with:
-        script: |
-          console.log("TEST");
+        to: ${{ inputs.to }}
+        subject: "HPE Deployment Email"
+        body: "This is a test email from the HPE deployment workflow."
